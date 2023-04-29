@@ -4,8 +4,23 @@
     "generate-template": "node generateTemplate.js"
   },
   "dependencies": {
+    "canvas": "^2.11.2",
     "handlebars": "^4.7.7",
     "pdf.js-extract": "^0.2.1",
     "pdfjs-dist": "^3.5.141"
-  }
+  },
+  "name": "template-generator",
+  "description": "Template Generator will become a frontend standalone library that generates HTML templates by uploading PDF files. It is currently in development phase and aims to support other file extensions in the future.",
+  "version": "1.0.0",
+  "main": "extractText.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debmalya37/template-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debmalya37/template-generator/issues"
+  },
+  "homepage": "https://github.com/debmalya37/template-generator#readme"
 }

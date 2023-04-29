@@ -1,5 +1,5 @@
-const { PDFExtract } = require('pdf.js-extract');
-const fs = require('fs');
+const { PDFExtract } = require("pdf.js-extract");
+const fs = require("fs");
 
 async function pdfWorker(pdfBytes) {
   try {
@@ -7,19 +7,19 @@ async function pdfWorker(pdfBytes) {
     const { text } = await pdfExtract.extractBuffer(pdfBytes, {});
     return text;
   } catch (error) {
-    console.error('Error extracting text:', error);
-    return '';
+    console.error("Error extracting text:", error);
+    return "";
   }
 }
 
 async function testPdfWorker() {
   try {
-    const pdfBytes = await fs.promises.readFile('Mantis.pdf');
+    const pdfBytes = await fs.promises.readFile("Debmalya-Sen.pdf");
     console.log(pdfBytes);
     const textWithPositionData = await pdfWorker(pdfBytes);
     console.log(textWithPositionData);
   } catch (error) {
-    console.error('Error reading file:', error);
+    console.error("Error reading file:", error);
   }
 }
 
